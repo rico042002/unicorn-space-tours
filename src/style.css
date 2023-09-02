@@ -1,0 +1,390 @@
+:root {
+  --primary-color: #ff7ca6;
+  --secondary-color: rebeccapurple;
+  --bg-dark: #150f64;
+  --bg-light: #dcd9ee;
+  --bg-black: #040234;
+}
+
+h1 {
+  color: var(--secondary-color);
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+nav li {
+  font-family: "Kulim Park", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* Utilities */
+.lead {
+  font-size: 125%;
+  letter-spacing: 0.03em;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  max-width: 1024px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.padding-vertical-medium {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.padding-vertical-lg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.margin-vertical-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.margin-vertical-lg {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexbox-3col > * {
+  flex: 0 1 30%;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.max-line-length {
+  max-width: 60ch;
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Color Utilities */
+.background-dark {
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+}
+
+.bg-black {
+  background-color: var(--bg-black);
+  color: var(--bg-light);
+}
+
+.text-dark {
+  color: var(--bg-dark);
+}
+
+.text-medium {
+  color: #7893dc;
+}
+/* Header */
+header {
+  position: relative;
+  padding: 60px 0;
+  min-height: 50vh;
+  text-align: center;
+  background-image: url("img/starry-sky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 100vw 100vh rgba(22, 15, 100, 0.5);
+}
+
+header h1 {
+  color: var(--primary-color);
+}
+
+.unicorn {
+  position: absolute;
+  bottom: 1vh;
+  max-height: 48vh;
+  max-width: 16vw;
+}
+
+.header-logo {
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 450ms ease-in 80ms;
+}
+
+.header-logo:hover {
+  transform: translate(8vw, -300%) scale(0.6);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    transform: translateY(25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header p {
+  opacity: 0.1;
+  transform: translateY(25%);
+  animation: fadeIn 450ms ease-in 300ms forwards;
+}
+
+/* main content */
+main {
+  color: #767676;
+}
+
+#about {
+  background-image: url("img/stars-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+
+#tours {
+  background-image: linear-gradient(
+      -20deg,
+      rgba(121, 147, 221, 0.5) 20%,
+      rgba(251, 169, 195, 0.9) 100%
+    ),
+    url("img/starry-sky.jpg");
+}
+
+/* Navbar */
+nav {
+  background: rgba(251, 169, 195, 0.95);
+  padding: 0.25em 0;
+  display: inline-block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease-in;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  padding: 0 0.5em;
+}
+
+nav ul li + li {
+  border-left: 2px solid slateblue;
+}
+
+nav a,
+nav li {
+  color: slateblue;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:visited {
+  color: #fff;
+}
+
+/* Card */
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.18);
+  background-color: #fff;
+}
+
+.card-img {
+  min-height: 40vh; /*originally 20vh*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+  box-shadow: inset 0 0 30px 60px rgba(21, 15, 100, 0.3);
+  transition: box-shadow 80ms ease-in-out;
+}
+
+.card:hover .card-img {
+  box-shadow: inset 0 0 10px 10px rgba(21, 15, 100, 0.3);
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card h3 span {
+  font-family: monospace;
+  font-size: 0.8em;
+  padding: 0.05em 0.25em;
+  background-color: rgba(255, 124, 166, 0.4);
+  border-radius: 4px;
+}
+
+/* Button */
+.button {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  background-color: var(--bg-dark);
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.1;
+}
+
+button.button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Form */
+
+form {
+  display: grid;
+  grid-gap: 24px;
+  max-width: 60ch;
+}
+
+.form-field {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.form-field .button {
+  justify-self: start;
+}
+
+.form-input {
+  border: 2px solid #6075b0;
+  border-radius: 4px;
+  height: 2em;
+  padding: 0 0.5em;
+  font-size: 18px;
+}
+
+label {
+  color: var(--bg-dark);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Meida Queries */
+@media (max-width: 800px) {
+  #about .max-line-length {
+    max-width: 50ch;
+  }
+
+  #about {
+    background-size: 25vw auto;
+    background-position: top right;
+  }
+}
+
+@media (max-width: 700px) {
+  #tours .flexbox {
+    flex-wrap: wrap;
+  }
+
+  #tours .card {
+    flex-basis: 100%;
+  }
+
+  #tours .card + .card {
+    margin-top: 24px;
+  }
+}

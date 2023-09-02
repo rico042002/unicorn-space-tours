@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booking | Unicon Space Tours</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li>Book Now</li>
+      </ul>
+    </nav>
+    <!-- Header -->
+    <header class="background-dark">
+      <div class="wrap center">
+        <img class="header-logo" src="img/logo.svg" alt="rocket" />
+        <h1>Book Your Tour</h1>
+        <p class="lead center max-line-length">
+          Complete the booking form, and get ready for blast off!
+        </p>
+      </div>
+      <img class="unicorn" src="img/unicorn.svg" alt="Unicorn" />
+    </header>
+    <main class="wrap center">
+      <form
+        class="center margin-vertical-lg padding-vertical-lg"
+        method="POST"
+        data-netlify="true"
+        data-netlify-recaptcha="true"
+      >
+        <div class="form-field">
+          <label for="first_name">First Name</label>
+          <input
+            class="form-input"
+            type="text"
+            name="first_name"
+            id="first_name"
+          />
+        </div>
+        <div class="form-field">
+          <label for="last_name">Last Name</label>
+          <input
+            class="form-input"
+            type="text"
+            name="last_name"
+            id="last_name"
+          />
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input class="form-input" type="email" name="email" id="email" />
+        </div>
+        <div class="form-field">
+          <label for="tour">Tour</label>
+          <select class="form-input" name="tour" id="tour">
+            <option disabled selected>Make a selection</option>
+            <option value="Mars">Mars</option>
+            <option value="Saturn">Saturn</option>
+            <option value="Pluto">Pluto</option>
+          </select>
+        </div>
+        <div data-netlify-recaptcha="true" class="center"></div>
+        <div class="form-field">
+          <button type="submit" class="button">Book My Tour</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <div class="bg-black padding-vertical-medium">
+      <footer class="center wrap flexbox flex-align-center">
+        <img src="img/logo.svg" alt="" />
+        <p class="margin-vertical-0">&copy; 2023 Ri-Code</p>
+      </footer>
+    </div>
+  </body>
+</html>
