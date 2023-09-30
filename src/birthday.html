@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>🦄Unicon Princess🦄</title>
+    <style>
+      :root {
+        --primary-color: #ff7ca6;
+        --secondary-color: rebeccapurple;
+        --bg-dark: #150f64;
+        --bg-light: #dcd9ee;
+        --bg-black: #040234;
+      }
+      body {
+        background-color: var(--bg-dark);
+        color: var(--bg-light);
+        font-family: 'Short Stack', cursive;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 60px;
+        letter-spacing: 0.02em;
+        color: var(--primary-color);
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        /* line-height: 200px; */
+        /* height: 200px; */
+        background-color: var(--secondary-color);
+        margin-top: 200px;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center">Happy Birthday🦄Khloe🦄</h1>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.1/dist/confetti.browser.min.js"></script>
+    <script>
+      document
+        .getElementsByClassName('center')[0]
+        .addEventListener('click', () => {
+          confetti({
+            particleCount: 300,
+            spread: 100,
+            origin: { y: 0.6 },
+          });
+        });
+    </script>
+  </body>
+</html>
