@@ -30,12 +30,7 @@
         font-size: 60px;
         letter-spacing: 0.02em;
         color: var(--primary-color);
-        width: 50%;
-        margin: auto;
         text-align: center;
-        /* line-height: 200px; */
-        /* height: 200px; */
-        background-color: var(--secondary-color);
         margin-top: 200px;
       }
       h1:hover {
@@ -45,12 +40,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 200px;
+      }
+      .container {
+        width: 400px;
+        height: 400px;
+        background-color: var(--secondary-color);
       }
     </style>
   </head>
   <body>
-    <h1 class="center">Happy Birthday🦄Khloe🦄</h1>
+    <div class="container">
+      <h1 class="center">Happy Birthday🦄Khloe🦄</h1>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.1/dist/confetti.browser.min.js"></script>
     <script>
       document
